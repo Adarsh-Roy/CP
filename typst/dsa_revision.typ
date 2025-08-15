@@ -226,6 +226,7 @@ it.combinations_with_replacement(iterable, r) # combos w/ repeat -> iterator[tup
 it.permutations(iterable, r=None)        # r-length perms -> iterator[tuple]
 it.product(a, b, repeat=1)               # cartesian product -> iterator[tuple]
 it.groupby(iterable, key=None)           # consecutive groups -> iterator[(key, group)]
+                                         # key defaults to value
 it.islice(iterable, start, stop, step=1) # slice of iterable -> iterator
 ```
 
@@ -250,3 +251,5 @@ val = dd[key]                             # get or create default -> value
 
 = Arrays
 Use #link(<sec:list_syntax>)[Lists] for arrays.
+
+= Stacks
