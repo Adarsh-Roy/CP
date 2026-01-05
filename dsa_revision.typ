@@ -12,7 +12,7 @@
     ]
   ]
 ]
-#show raw: block.with(fill: luma(224), inset:8pt, width:100%)
+#show raw.where(block: true): block.with(fill: luma(224), inset:8pt, width:100%)
 #pagebreak(weak: true)
 #outline()
 #pagebreak(weak: true)
@@ -27,7 +27,7 @@
 == Better I/O
 ```python
 import sys
-input = sys.stdin.readline            # faster input -> function
+input = sys.stdin.readline            # `readline` is faster than `input`
 print(*args)                           # print space-separated -> None
 numbers = list(map(int, input().split())) # read ints from line -> list[int]
 words = list(map(str, input().split()))   # read strs from line -> list[str]
@@ -39,7 +39,7 @@ x >> n        # shift right by n bits -> int (x//2**n)
 x & y         # bitwise AND -> int
 x | y         # bitwise OR -> int
 x ^ y         # bitwise XOR -> int
-~x            # bitwise NOT -> int (-(x+1))
+~x            # bitwise NOT, equivalent to (-(x+1)) -> int
 x & 1         # check LSB -> int (0 or 1)
 x | 1         # set LSB to 1 -> int
 x & ~1        # set LSB to 0 -> int
@@ -95,7 +95,7 @@ d = s - t                             # difference -> new set
 sd = s.symmetric_difference(t)        # symmetric difference -> new set
 sd = s ^ t                            # symmetric difference -> new set
 n = len(s)                            # size -> int
-ok = (x in s)                         # membership -> bool
+ok = (x in s)                         # check membership -> bool
 ```
 == Tuple
 ```python
